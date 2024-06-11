@@ -26,7 +26,7 @@ document.querySelector(".navright")
     else{
         gsap.to(".menu",{
            top : "-100%",
-           opacity : 0,
+        //    opacity : 0,
            ease : "circ.in",
            duration : 1,
         })

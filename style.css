@@ -100,6 +100,7 @@ nav h3:hover{
     opacity: 0.8;
 }
 .navright , .btmp{
+    user-select: none;
     display: flex;
     align-items: center;
     gap: .5vw;
