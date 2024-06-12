@@ -1,12 +1,14 @@
 @font-face {
-    font-family:siena;
+    font-family: siena;
     src: url("./fonts/Siena-Regular.woff2");
 }
+
 @font-face {
     font-family: openSans;
     src: url("./fonts/OpenSans-Regular.ttf");
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,6 +21,20 @@ body {
     width: 100%;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    width: 100%;
+    background: #655B50;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #B6AB8C;
+    border-radius: 10px;
+}
+
 #main {
     height: 100%;
     width: 100%;
@@ -26,7 +42,8 @@ body {
     color: #B6AB8C;
     /* overflow-x: hidden; */
 }
-.menu{
+
+.menu {
     width: 100%;
     height: 100vh;
     background-color: #655B50;
@@ -38,23 +55,26 @@ body {
     top: -100%;
     overflow: hidden;
 }
-.menu img{
+
+.menu img {
     position: absolute;
     left: 5%;
     top: 90%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-.menuitems{
+
+.menuitems {
     width: max-content;
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     z-index: 10;
     transition: opacity ease .5s;
 }
-.menuitems h1{
-    opacity : 1;
+
+.menuitems h1 {
+    opacity: 1;
     cursor: pointer;
     text-align: right;
     padding: 1vw 0vw;
@@ -62,14 +82,17 @@ body {
     font-weight: 200;
     transition: opacity ease .5s;
 }
-.menuitems:hover h1{
+
+.menuitems:hover h1 {
     opacity: 0.3;
 }
-.menuitems h1:hover{
+
+.menuitems h1:hover {
     cursor: pointer;
-    opacity : 1;
+    opacity: 1;
 }
-nav{
+
+nav {
     width: 100vw;
     height: 8vh;
     position: fixed;
@@ -84,22 +107,27 @@ nav{
     font-size: 1.2vw;
     z-index: 99;
 }
-.navleft{
+
+.navleft {
     display: flex;
     align-items: center;
     gap: 1vw;
 }
-nav h3{
+
+nav h3 {
     font-weight: 300;
     cursor: pointer;
     z-index: 20;
-    transition: opacity ease .4s,scale ease .4s;
+    transition: opacity ease .4s, scale ease .4s;
 }
-nav h3:hover{
+
+nav h3:hover {
     scale: 0.95;
     opacity: 0.8;
 }
-.navright , .btmp{
+
+.navright,
+.btmp {
     user-select: none;
     display: flex;
     align-items: center;
@@ -107,11 +135,14 @@ nav h3:hover{
     cursor: pointer;
     position: relative;
 }
-.navright i{
+
+.navright i {
     font-size: 2vw;
     padding: 0vw 1.5vw;
 }
-.dots,.navright .navdots{
+
+.dots,
+.navright .navdots {
     aspect-ratio: 1/1;
     width: 1vw;
     border-radius: 100%;
@@ -119,7 +150,8 @@ nav h3:hover{
     transition: scale ease .5s;
     opacity: .5;
 }
-.imgcircle{
+
+.imgcircle {
     aspect-ratio: 1/1;
     width: 30vw;
     border-radius: 50%;
@@ -130,9 +162,10 @@ nav h3:hover{
     position: absolute;
     left: 50%;
     top: 40%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-.page{
+
+.page {
     background-color: #655B50;
     width: 100%;
     height: 125vh;
@@ -142,30 +175,35 @@ nav h3:hover{
     z-index: 10;
     overflow: hidden;
 }
-.page>img{
+
+.page>img {
     width: 8vw;
     position: absolute;
     z-index: 2;
-    left : 50%;
+    left: 50%;
     top: 15%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-.page .imgcircle img{
+
+.page .imgcircle img {
     height: 100vh;
     min-width: 100vw;
     object-fit: cover;
 }
 
-.page .lefttext, .page .righttext{
+.page .lefttext,
+.page .righttext {
     width: 50vw;
     position: relative;
 }
-.lefttext h1{
+
+.lefttext h1 {
     font-size: 4vw;
     font-weight: 200;
     line-height: 4vw;
 }
-.lefttext p{
+
+.lefttext p {
     font-family: openSans;
     width: 50%;
     font-size: 1vw;
@@ -175,68 +213,82 @@ nav h3:hover{
     margin-top: 4vh;
     text-transform: uppercase;
 }
-.righttext{
-    padding: 20vw 0vw 0vw 23vw ;
+
+.righttext {
+    padding: 20vw 0vw 0vw 23vw;
 }
-.righttext p{
+
+.righttext p {
     font-size: 1.4vw;
     font-weight: 200;
     line-height: 2vw;
 }
-.righttext img{
+
+.righttext img {
     width: 18vw;
     object-fit: cover;
     position: absolute;
     left: 0;
     top: 0;
 }
-.righttext .btmp{
+
+.righttext .btmp {
     margin-top: 2vw;
     text-transform: uppercase;
 }
-.btmp .dots{
+
+.btmp .dots {
     width: 2vw;
 }
-.btmp h3{
+
+.btmp h3 {
     font-size: 1.2vw;
     font-weight: 300;
     white-space: nowrap;
 }
-.page2{
+
+.page2 {
     background-color: #EAE3D1;
     color: #655B50;
     z-index: 9;
 }
-.page2 .imgcircle img{
+
+.page2 .imgcircle img {
     height: 105vh;
 }
-.page3{
+
+.page3 {
     color: #B6AB8C;
     background-color: #39505E;
     z-index: 6;
 }
-.page3 .imgcircle img{
+
+.page3 .imgcircle img {
     height: 100.5vh;
 }
-.page4{
+
+.page4 {
     background-color: #EAE3D1;
     color: #655B50;
     z-index: 7;
 }
-.page4 svg{
+
+.page4 svg {
     width: 28vw;
     border-radius: 50%;
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-.page4{
+
+.page4 {
     max-height: 100vh;
     padding-bottom: 11vw;
     overflow: hidden;
 }
-.page4 .righttext h1{
+
+.page4 .righttext h1 {
     font-size: 4vw;
     font-weight: 200;
     line-height: 4vw;
@@ -244,63 +296,75 @@ nav h3:hover{
     text-align: right;
     white-space: nowrap;
 }
-.page4 .righttext h3{
+
+.page4 .righttext h3 {
     text-align: right;
     text-transform: uppercase;
     font-weight: 300;
     font-size: 1.1vw;
     margin-top: 2vw;
 }
-.navright:hover .dots,.btmp:hover .dots{
+
+.navright:hover .dots,
+.btmp:hover .dots {
     scale: 3 !important;
 }
-.navright:hover .navdots{
-    scale : 4 !important;
+
+.navright:hover .navdots {
+    scale: 4 !important;
 }
-.page4>img{
+
+.page4>img {
     aspect-ratio: 1/1;
     width: 30vw;
     border-radius: 50%;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     object-fit: cover;
 }
-.page6{
+
+.page6 {
     flex-direction: column;
     position: relative;
     padding: 0;
 }
-.page6 .btmp h3{
+
+.page6 .btmp h3 {
     font-size: 2vw;
 }
-.page5{
+
+.page5 {
     background-color: #655B50;
     padding-top: 24vw;
     height: 100vh;
     flex-direction: column;
     align-items: center;
 }
-.page5 p{
+
+.page5 p {
     font-family: openSans !important;
     margin: 3vw 0vw;
     font-size: 1.9vw;
     font-weight: 300;
     text-align: center;
 }
-.page5 .btmp{
+
+.page5 .btmp {
     display: flex;
 }
-.page6 svg{
+
+.page6 svg {
     width: 7vw;
     height: max-content;
     position: absolute;
     z-index: 100;
     top: 30%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-.innerpage{
+
+.innerpage {
     position: absolute;
     left: 0;
     top: 100%;
@@ -308,7 +372,8 @@ nav h3:hover{
     background-color: #D5C8A3;
     color: #655B50;
 }
-.swiperpage{
+
+.swiperpage {
     align-items: center;
     background-color: #f3efe5;
     color: #655B50;
@@ -318,44 +383,52 @@ nav h3:hover{
     height: 120vh;
     text-align: center;
 }
-.swiperpage .textbox{
+
+.swiperpage .textbox {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1vw;
 }
-.textbox h1{
+
+.textbox h1 {
     font-size: 4.5vw;
     font-weight: 200;
     white-space: nowrap;
 }
-.textbox h2{
+
+.textbox h2 {
     font-size: 1vw;
     line-height: 1.6vw;
     letter-spacing: 1px;
     font-weight: 200;
 }
-.textbox h3{
+
+.textbox h3 {
     font-size: 1.2vw;
     font-weight: lighter;
 }
-.textbox .btmp{
+
+.textbox .btmp {
     font-size: 2vw;
     margin-top: 1vw;
 }
-.swiperpage .imgbox{
+
+.swiperpage .imgbox {
     aspect-ratio: 1/1;
     width: 28vw;
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 2vw;
 }
-.swiperpage .imgbox img{
+
+.swiperpage .imgbox img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
-.pagination{
+
+.pagination {
     margin-top: auto;
     margin-bottom: 1vw;
     display: flex;
@@ -364,7 +437,8 @@ nav h3:hover{
     width: 30vw;
     height: 10vh;
 }
-.line{
+
+.line {
     /* background-color: #655b5049; */
     height: .6px;
     width: 5.5vw;
@@ -373,7 +447,7 @@ nav h3:hover{
     cursor: pointer;
 }
 
-.line::after{
+.line::after {
     content: "";
     background-color: #655B50;
     position: absolute;
@@ -384,13 +458,16 @@ nav h3:hover{
     transform: translateY(-50%);
     transition: height ease .4s;
 }
-.line:hover::after{
+
+.line:hover::after {
     height: 1.5px;
 }
-.line0::after{
+
+.line0::after {
     height: 1.5px;
 }
-.footer{
+
+.footer {
     width: 100%;
     height: 100vh;
     background-color: #39505E;
@@ -401,57 +478,67 @@ nav h3:hover{
     position: relative;
     overflow-x: hidden;
 }
-.whitespace{
+
+.whitespace {
     height: 20vh;
     width: 100%;
     background-color: #fff;
 }
-.leftimg{
+
+.leftimg {
     position: absolute;
     left: 5%;
     top: 5%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: initial;
 }
-.leftbox{
+
+.leftbox {
     width: 27vw;
     align-self: end;
     font-size: 1.1vw;
 }
-.leftbox a{
+
+.leftbox a {
     font-weight: 200;
     color: #D5C8A3;
     display: block;
 }
-.leftbox p{
+
+.leftbox p {
     font-weight: 200;
     line-height: 1.5;
     margin: 2vw 0vw;
     letter-spacing: 1px;
 }
-.centerbox{
+
+.centerbox {
     align-self: end;
     text-align: center;
     align-items: center;
 }
-.centerbox h1{
+
+.centerbox h1 {
     font-size: 4vw;
     margin: 2vw 0vw;
     font-weight: 200;
     cursor: pointer;
     transition: opacity ease .4s;
 }
-.centerbox h1:hover{
+
+.centerbox h1:hover {
     opacity: 0.5;
 }
-.media{
+
+.media {
     margin-top: 10vw;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1vw;
 }
-.media .gola{
+
+.media .gola {
     aspect-ratio: 1/1;
     border: .7px solid #B6AB8C;
     width: 55px;
@@ -462,23 +549,27 @@ nav h3:hover{
     cursor: pointer;
     transition: scale ease .3s;
 }
-.gola:hover{
+
+.gola:hover {
     scale: 1.1;
 }
-.media .gola i{
+
+.media .gola i {
     font-size: 2em;
     color: transparent;
     -webkit-text-stroke: .7px #B6AB8C;
     font-weight: 100;
 }
-.rightimg{
+
+.rightimg {
     position: absolute;
     right: 5%;
     bottom: 10%;
     transform: translateX(50%);
     width: 20vw;
 }
-.footernav{
+
+.footernav {
     width: 100%;
     padding: 5vw;
     background-color: #F4F1E9;
@@ -486,35 +577,43 @@ nav h3:hover{
     align-items: center;
     text-transform: uppercase;
 }
-.footerlogs{
+
+.footerlogs {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8vw;
 }
-.footernav img{
+
+.footernav img {
     mix-blend-mode: darken;
     width: 10vw;
 }
-.footernav .links{
+
+.footernav .links {
     margin-left: 10vw;
     display: flex;
     gap: 25px;
 }
-.footernav .links a,.links h4{
+
+.footernav .links a,
+.links h4 {
     color: #655B50;
     font-size: 1.05vw;
     letter-spacing: 1px;
     font-weight: 300;
 }
-a{
+
+a {
     transition: opacity ease .4s;
 }
-a:hover{
+
+a:hover {
     opacity: 0.65;
 }
-@media (max-width : 600px){
-    nav{
+
+@media (max-width : 600px) {
+    nav {
         background-color: #655B50;
         color: #B6AB8C;
         padding: 4vw;
@@ -522,175 +621,220 @@ a:hover{
         position: fixed;
         top: 0;
     }
-    .navleft{
+
+    .navleft {
         gap: 3vw;
     }
-    .navright{
+
+    .navright {
         justify-self: auto;
     }
-    .navright .navdots{
+
+    .navright .navdots {
         width: 3vw;
     }
-    .navright i{
+
+    .navright i {
         font-size: 5vw;
     }
-    .navright .navdots{
+
+    .navright .navdots {
         display: none;
     }
-    .menuitems h1{
+
+    .menuitems h1 {
         font-size: x-large;
         padding: 2vw 0vw;
     }
-    .imgcircle{
+
+    .imgcircle {
         border-radius: 100%;
         width: 70vw;
     }
-    .page{
+
+    .page {
         padding: 5vw;
         display: flex;
         align-items: flex-end;
     }
-    .page>img{
+
+    .page>img {
         width: 20vw;
     }
-    .page .lefttext{
+
+    .page .lefttext {
         display: flex;
         flex-direction: column;
         height: fit-content;
         transform: translateY(-10%);
         width: 100%;
     }
-    .lefttext h1{
+
+    .lefttext h1 {
         font-size: 10vw;
         line-height: 12vw;
     }
-    .lefttext p{
+
+    .lefttext p {
         width: 100%;
         text-align: justify;
         font-size: 4vw;
         line-height: 5vw;
     }
-    .righttext{
+
+    .righttext {
         display: none;
         padding: 5vw;
     }
-    .righttext p{
+
+    .righttext p {
         width: 60vw;
         font-size: 5vw;
         line-height: 6vw;
     }
-    .page4{
+
+    .page4 {
         flex-direction: column;
         align-items: start;
     }
-    .page4 .lefttext{
+
+    .page4 .lefttext {
         transform: translateY(40%);
     }
-    .page4 svg{
+
+    .page4 svg {
         width: 50vw;
     }
-    .page4>img{
+
+    .page4>img {
         width: 50vw;
     }
-    .page4 .righttext{
+
+    .page4 .righttext {
         display: block;
     }
-    .page4 .righttext h1{
+
+    .page4 .righttext h1 {
         margin-top: 40vh;
         width: 100vw;
         font-size: 12vw;
         line-height: 13vw;
         text-align: left;
     }
-    .page4 .righttext h3{
+
+    .page4 .righttext h3 {
         font-size: 4vw;
         text-align: left;
     }
-    .btmp .dots{
+
+    .btmp .dots {
         width: 10vw;
     }
-    .btmp h3{
+
+    .btmp h3 {
         font-size: 6vw;
     }
-    .page5{
+
+    .page5 {
         padding-top: 70vw;
     }
-    .page5 p{
+
+    .page5 p {
         font-size: 5vw;
         font-weight: 300;
     }
-    .page6 .btmp{
+
+    .page6 .btmp {
         align-self: center;
     }
-    .page6 svg{
+
+    .page6 svg {
         top: 20%;
         width: 30vw;
     }
-    .swiperpage{
+
+    .swiperpage {
         height: fit-content;
         padding: 20vw 5vw 20vw;
     }
-    .swiperpage .imgbox{
+
+    .swiperpage .imgbox {
         width: 60vw;
     }
-    .swiperpage .textbox{
+
+    .swiperpage .textbox {
         width: 100%;
         gap: 5vw;
     }
-    .textbox h1{
+
+    .textbox h1 {
         width: 100%;
         white-space: wrap;
         font-size: 10vw;
     }
-    .textbox h2{
+
+    .textbox h2 {
         font-size: 5vw;
         line-height: 7vw;
     }
-    .pagination{
+
+    .pagination {
         align-self: center;
         margin-top: auto;
         width: 30vw;
     }
-    .footer{
+
+    .footer {
         width: 100vw;
         flex-direction: column-reverse;
     }
-    .leftimg{
+
+    .leftimg {
         width: 40vw;
     }
-    .centerbox{
+
+    .centerbox {
         align-self: initial;
     }
-    .centerbox h1{
+
+    .centerbox h1 {
         font-size: 10vw;
     }
-    .leftbox{
+
+    .leftbox {
         width: 100%;
         align-self: center;
         text-align: center;
         font-size: 5vw;
     }
-    .leftbox a{
+
+    .leftbox a {
         margin-top: 3vw;
     }
-    .leftbox p{
-        margin: 15vw 0vw ;
+
+    .leftbox p {
+        margin: 15vw 0vw;
     }
-    .footernav{
+
+    .footernav {
         flex-direction: column;
         padding: 10vw 0vw 20vw;
         gap: 10vw;
     }
+
     .footernav img {
         width: 25vw;
     }
-    .footernav .links{
+
+    .footernav .links {
         flex-direction: column;
         align-items: center;
         margin-left: 0;
         gap: 10px;
     }
-    .footernav .links a,.links h4{
+
+    .footernav .links a,
+    .links h4 {
         font-size: 4vw;
         font-weight: 200;
     }
